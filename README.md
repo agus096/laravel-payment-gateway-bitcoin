@@ -24,3 +24,6 @@ ketika user malakukan checkout sistem mengembalikan respon yang di dalam nya ter
 # User melakukan cek pembayaran
 karena hanya sebagai contoh disini kita memasukan id transaksi manual pada link <code> http://127.0.0.1:8000/billing </code>, untuk kasus nyata hendak nya ini adalah halaman list transaksi user yang dimana harus login terlebih dahulu untuk mengecek nya. misal saya memasukan invoice_id BTC004 dan Api akan mengembalikan respon kembali.
 
+# konfigurasi 
+<img src="https://i.ibb.co/WkSkNWg/cong.png">
+
