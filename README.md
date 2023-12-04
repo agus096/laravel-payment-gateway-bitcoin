@@ -1,66 +1,26 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<img src="https://i.ibb.co/cCKK9JZ/logo-black.png">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# About
+Script payment gateway crypto ini menggunakan Api dari <code>https://coinremitter.com/</code> untuk menggunakan api ini kamu harus membuat akun dan membuat wallet . dan gunakan API yang terdapat pada wallet sebagai credetial. hanya 2 hal yang dibutuhkan Api_key & password. silahkan buat 2 wallet (wallet seller & wallet buyer) anda bisa menggunakan coin TCN untuk melakukan debuging yang telah disediakan oleh coinremitter.com
 
-## About Laravel
+# Flow script
+<ul>
+    <li>User melakukan checkout</li>
+    <li>User melakukan pembayaran melalui link yang di hasilkan dari api</li>
+    <li>user membuka halaman billing/daftar transaksi dan menggklik cek transaksi</li>
+</ul>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Note 
+Perlu di pahami transaksi cyrpto tidak seperti transaksi perbankan atau emoney yang bisa dengan cepat di konfirmasi oleh sistem, crypto terkadang membutuhkan waktu yang cukup lama untuk mengkonfirmasi sebuah transaksi antar wallet. maka dari itu sebuah payment gateway dengan crypto menurut saya diberikan sebuah button untuk mengecek pembayaran secara berkala.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Proses Checkout.
+<img src="https://i.ibb.co/nssd24q/Shop-with-cyrpto.gif">
+ketika user malakukan checkout sistem mengembalikan respon yang di dalam nya terdapat link payment anda bisa melakukan pembayaran di link tsb. namun setelah payment dilakukan jangan harap transaksi di konfirmasi dengan cepat, ini membutuhkan waktu , dan saya menyediakan button untuk melakukan cek secara berkala,
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Respon ketika Checkout
+<img src="https://i.ibb.co/fHz7dMk/res-cehckout.png">
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# User melakukan cek pembayaran
+karena hanya sebagai contoh disini kita memasukan id transaksi manual pada link <code> http://127.0.0.1:8000/billing </code>, untuk kasus nyata hendak nya ini adalah halaman list transaksi user yang dimana harus login terlebih dahulu untuk mengecek nya. misal saya memasukan invoice_id BTC004 dan Api akan mengembalikan respon kembali.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
