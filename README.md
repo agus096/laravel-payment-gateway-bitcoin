@@ -1,4 +1,5 @@
-<img src="https://i.ibb.co/cCKK9JZ/logo-black.png">
+<img src="https://i.ibb.co/cCKK9JZ/logo-black.png" width="30%">
+<hr>
 
 # About
 Script payment gateway crypto ini menggunakan Api dari <code>https://coinremitter.com/</code> untuk menggunakan api ini kamu harus membuat akun dan membuat wallet . dan gunakan API yang terdapat pada wallet sebagai credetial. hanya 2 hal yang dibutuhkan Api_key & password. silahkan buat 2 wallet (wallet seller & wallet buyer) anda bisa menggunakan coin TCN untuk melakukan debuging yang telah disediakan oleh coinremitter.com
