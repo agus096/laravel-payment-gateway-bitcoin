@@ -15,7 +15,7 @@ Script payment gateway crypto ini menggunakan Api dari <code>https://coinremitte
 Perlu di pahami transaksi cyrpto tidak seperti transaksi perbankan atau emoney yang bisa dengan cepat di konfirmasi oleh sistem, crypto terkadang membutuhkan waktu yang cukup lama untuk mengkonfirmasi sebuah transaksi antar wallet. maka dari itu sebuah payment gateway dengan crypto menurut saya diberikan sebuah button untuk mengecek pembayaran secara berkala.
 
 # Proses Checkout.
-<img src="https://i.ibb.co/nssd24q/Shop-with-cyrpto.gif">
+<img src="[https://i.ibb.co/nssd24q/Shop-with-cyrpto.gif](https://i.ibb.co/MSPLWg6/Shop-with-cyrpto.gif)">
 ketika user malakukan checkout sistem mengembalikan respon yang di dalam nya terdapat link payment anda bisa melakukan pembayaran di link tsb. namun setelah payment dilakukan jangan harap transaksi di konfirmasi dengan cepat, ini membutuhkan waktu , dan saya menyediakan button untuk melakukan cek secara berkala,
 
 # Respon ketika Checkout
